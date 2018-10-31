@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Application-wide Styles */
+/* h1 {
+    color: #5882ed;
+    font-family: Cambria, Georgia, Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+h2, h3 {
+    color: #000000;
+    font-family: Cambria, Georgia, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-weight: bold;
+    margin: 6px 0;
+}
+body {
+    margin: 8px;
+}
+body, input[text], button {
+    color: #000000;
+    background-color: #efefef;
+    font-family: Cambria, Georgia;
+}
+p{
+    margin: 0;
+} */
+
+/* everywhere else */
+/* {
+    /* font-family: Cambria, Georgia, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.bold{
+    font-weight: bold;
+} */
+
+/* pagine */
+/* .pagina{
+    text-align: center;
+}
+*/
+
+
+/*
+.main-head{
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 0 auto;    
+    color: #5882ed;
+}
+.contenitore{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    display: flex;
+}
+
+@media screen and (max-width: 700px) {
+    .contenitore{
+        width: calc(100% - 20px);
+    }
+} */
+
+
+/* MAIN */
+main{
+    margin-top: 56px;
+}
+.main-logo{
+    max-width: 200px;
+    width: 100%;
+    margin: 0;
+}
+
+#console{
+    position: fixed;    
+    right: 0;
+    max-width: 200px;
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    background-color: #343a40!important;
+    color: #fff;
+    font-size: 14px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+    /* max-height: 31px;     */
+    transition: all 1s ease-in-out;
+    top: -56px;
+    /* display: none; */
+}
+#console.show{
+    top:56px;
+    /* display: block; */
+}
+
+.mastfoot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    main{
+        margin-top: 70px;
+    }
+    #console.show{        
+        top:70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main{
+        margin-top: 56px;
+    }
+    #console.show{        
+        top:56px;
+    }
+}

@@ -1,0 +1,72 @@
+
+<div *ngIf="false">
+    <h2>My car</h2>
+    <label>Brand:        
+      <strong *ngIf="selectedHero">{{ selectedHero.name }}</strong>
+      <br>
+      <br>    
+      <input *ngIf="selectedHero" [(ngModel)]="selectedHero.description" placeholder="name">
+    </label>
+    <br>
+</div>  
+<div style="display: none;">
+  <label>Brand name:
+    <input #brandName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(brandName.value); brandName.value=''">
+    add
+  </button>
+</div>
+
+
+<div class="container" style="padding-top:30px;">
+  <div class="jumbotron">
+      <h1 class="display-3">Welcome to Park</h1>
+      <p class="lead">Here you can find all cars you want.</p>
+      <hr class="my-4">
+      <p>Feel free to update if something misses.</p>
+      <!-- <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p> -->
+    </div>
+  <div class="row">
+    <div class="col">
+      <p class="lead">
+        Brands      
+      </p>    
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <div class="list-group" *ngIf="brands != null">
+          <a href="#" class="list-group-item list-group-item-action" *ngFor="let brand of brands; let i = index" routerLink="/detail/{{brand.id}}">
+            {{brand.name}}
+          </a>        
+      </div>
+    </div>
+  </div>
+  <hr>
+</div> <!-- /container -->
+
+
+
+<div style="display: none;">
+  <h2>Brands</h2>
+  <ul class="heroes" *ngIf="brands != null">
+    <li *ngFor="let brand of brands; let i = index"
+      [class.selected]="brand === selectedHero"
+      (click)="onSelect(brand)">
+      <a routerLink="/detail/{{brand.id}}">
+        <!-- <span class="badge">{{i+1}}</span> -->
+        <span class="list-text">{{brand.name}}</span>
+      </a>
+      <!-- <button class="delete" title="delete brand"
+        (click)="delete(brand)">
+        x
+      </button> -->
+    </li>
+  </ul>
+</div>
+<!-- <app-brand-models [brand]="selectedHero"></app-brand-models> -->
+
